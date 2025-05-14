@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #1c1c1c;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #00bcd4;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* TARJETAS DE LAS PELÍCULAS */
+.movie-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  width: 220px;
+  height: 330px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner,
+.card:focus-within .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card-front {
+  background-size: cover;
+  background-position: center;
+}
+
+.card-back {
+  background-color: #222;
+  color: #fff;
+  transform: rotateY(180deg);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.card-focus-button {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.card-button {
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.card-button:hover {
+  background-color: #0097a7;
+}
+
+/* BOTÓN ANIMADO */
+.button-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.animated-button {
+  background-color: #00bcd4;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.4s, transform 0.2s;
+}
+.animated-button:hover {
+  background-color: #0097a7;
+  transform: scale(1.05);
+}
+.animated-button:focus {
+  outline: 2px solid white;
+}
+.animated-button:active {
+  transform: scale(0.95);
+  background-color: #007c91;
+}
+
+/* MENÚ DESPLEGABLE */
+.nav-links li {
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #222;
+  padding: 0.5rem 0;
+  display: none;
+  flex-direction: column;
+  min-width: 140px;
+  z-index: 1;
+  border-radius: 6px;
+}
+
+.dropdown-content li a {
+  padding: 0.5rem 1rem;
+  display: block;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.dropdown-content li a:hover {
+  background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animación del dropdown */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
