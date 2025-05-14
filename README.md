@@ -22,7 +22,6 @@ Este es un proyecto de desarrollo web enfocado en la práctica de animaciones ut
 - **Navbar animada** con secciones: Inicio, Películas y Series. Cada sección contiene géneros desplegables.
 - **Tarjetas de películas animadas** que se voltean al hacer hover (solo con CSS) y muestran información detallada.
 - **Botones animados** en la parte trasera de las tarjetas que llevan a IMDb.
-- **Footer** con nombre del autor, materia y fecha que aparece solo al llegar al final de la página.
 
 ## 🧪 Tecnologías Usadas
 
